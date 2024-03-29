@@ -9,6 +9,9 @@ module.exports = {
         "color-primary": "#9356DC",
         "color-secondary": "#FF79DA",
       },
+      fontFamily: {
+        shrikhand: "shrikhand",
+      },
     },
   },
   plugins: [],

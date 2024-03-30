@@ -1,0 +1,29 @@
+<section class="bg-light-gray pt-10 px-4">
+  <h2 class="font-bold text-xl mb-4">Restaurants</h2>
+  <div class="flex flex-col gap-y-4">
+    <article
+      *ngFor="let restaurant of restaurantList"
+      class="rounded-2xl overflow-hidden menu-shadow"
+    >
+      <div class="h-36 relative">
+        <small
+          *ngIf="restaurant.tag"
+          class="absolute top-3 right-3 bg-[#99E2D0] text-green-700 py-1 px-2.5"
+          >{{ restaurant.tag }}</small
+        >
+        <img
+          [src]="restaurant.cover"
+          class="bg-center bg-no-repeat h-full w-full"
+        />
+      </div>
+      <div class="p-3 relative bg-white">
+        <h3 class="font-bold text-base">{{ restaurant.menu }}</h3>
+        <p class="font-light text-sm">{{ restaurant.location }}</p>
+        <fa-icon
+          [icon]="faHeart"
+          class="absolute top-1/4 right-6 text-4xl"
+        ></fa-icon>
+      </div>
+    </article>
+  </div>
+</section>

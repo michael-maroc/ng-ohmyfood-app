@@ -3,11 +3,12 @@ import { Restaurant } from '../../shared/model/Restaurant';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-restaurants',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, RouterLink],
   templateUrl: './restaurants.component.html',
   styleUrl: './restaurants.component.scss',
 })

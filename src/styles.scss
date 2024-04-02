@@ -36,3 +36,9 @@ app-home {
 .menu-shadow {
   box-shadow: lightgray 0.2rem 0.2rem 0.3rem;
 }
+
+@media screen and (min-width: 768px) {
+  app-home {
+    gap: 3rem;
+  }
+}

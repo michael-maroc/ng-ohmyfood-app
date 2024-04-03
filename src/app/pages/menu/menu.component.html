@@ -1,10 +1,16 @@
-<section class="bg-light-gray">
+<section class="bg-light-gray relative">
   <div class="py-3 border-b-4 border-gray-300 flex justify-center">
     <img
       src="/assets/images/logo/ohmyfood.png"
       alt="Logo ohmyfood"
       class="w-40"
     />
+    <a [routerLink]="''">
+      <fa-icon
+        [icon]="faArrowLeft"
+        class="absolute left-4 top-3 text-xl"
+      ></fa-icon>
+    </a>
   </div>
 
   <div>

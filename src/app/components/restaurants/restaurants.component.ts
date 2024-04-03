@@ -3,7 +3,7 @@ import { Restaurant } from '../../shared/model/Restaurant';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-restaurants',
@@ -16,7 +16,14 @@ export class RestaurantsComponent implements OnInit {
   restaurantList = Restaurant;
   faHeart = faHeart;
 
+  constructor(private router: Router) {}
+
   ngOnInit(): void {
     console.log(this.restaurantList);
+  }
+
+  getToMenu(menuId: number) {
+    const link = ['/menu', menuId];
+    this.router.navigate(link);
   }
 }

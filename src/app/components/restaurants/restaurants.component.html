@@ -9,7 +9,7 @@
       *ngFor="let restaurant of restaurantList"
       class="rounded-2xl overflow-hidden menu-shadow md:mb-4"
     >
-      <a routerLink="">
+      <a (click)="getToMenu(restaurant.id)">
         <div class="relative">
           <small
             *ngIf="restaurant.tag"

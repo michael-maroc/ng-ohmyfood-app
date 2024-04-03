@@ -22,7 +22,7 @@ export const Restaurant = [
         price: 20,
       },
     ],
-    dish: [
+    dishes: [
       {
         title: 'Filet de bœuf aux herbes',
         description: 'Accompagnés de sa ribambelle de légumes',
@@ -85,7 +85,7 @@ export const Restaurant = [
         price: 35,
       },
     ],
-    dish: [
+    dishes: [
       {
         title: 'Noix de coquilles Saint-Jacques',
         description: 'Sur lit de purée de céleri-rave',
@@ -144,7 +144,7 @@ export const Restaurant = [
         price: 20,
       },
     ],
-    dish: [
+    dishes: [
       {
         title: 'Coquilles Saint Jacques',
         description: "Accompagnées d'une purée de panais",
@@ -203,7 +203,7 @@ export const Restaurant = [
         price: 20,
       },
     ],
-    dish: [
+    dishes: [
       {
         title: 'Poulet rôti aux herbes de Provence',
         description: 'Et sa crème de truffe',

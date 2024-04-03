@@ -1,11 +1,11 @@
-<section class="bg-light-gray relative">
-  <div class="py-3 border-b-4 border-gray-300 flex justify-center">
+<section class="bg-light-gray">
+  <div class="py-3 flex justify-center bg-white">
     <img
       src="/assets/images/logo/ohmyfood.png"
       alt="Logo ohmyfood"
       class="w-40"
     />
-    <a [routerLink]="''">
+    <a routerLink="">
       <fa-icon
         [icon]="faArrowLeft"
         class="absolute left-4 top-3 text-xl"
@@ -20,70 +20,73 @@
       class="h-52 w-full object-cover bg-center"
     />
   </div>
-  <div class="px-4 py-4">
-    <div class="flex items-center justify-between mb-6">
-      <h2 class="font-shrikhand text-2xl">{{ restaurant.menu }}</h2>
-      <fa-icon [icon]="faHeart" class="text-3xl"></fa-icon>
-    </div>
-    <div class="mb-9">
-      <h3
-        class="font-light text-xs mb-6 ml-3 border-b-green-400 border-b-2 w-9 pb-1"
-      >
-        ENTRÊES
-      </h3>
-      <div class="grid gap-y-4">
-        <article
-          *ngFor="let entry of restaurant.entries"
-          class="bg-white rounded-2xl px-3 py-2 menu-shadow"
-        >
-          <p class="font-bold text-base">{{ entry.title }}</p>
-          <div class="flex justify-between">
-            <span class="font-light text-sm">{{ entry.description }}</span>
-            <span class="font-bold text-sm">{{ entry.price }}€</span>
-          </div>
-        </article>
+
+  <section class="rounded-t-3xl relative bottom-8 bg-light-gray">
+    <div class="px-4 py-4">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-shrikhand text-xl ml-3">{{ restaurant.menu }}</h2>
+        <fa-icon [icon]="faHeart" class="text-3xl"></fa-icon>
       </div>
-    </div>
-    <div class="mb-9">
-      <h3
-        class="font-light text-xs mb-6 ml-3 border-b-green-400 border-b-2 w-9 pb-1"
-      >
-        PLATS
-      </h3>
-      <div class="grid gap-y-4">
-        <article
-          *ngFor="let dish of restaurant.dishes"
-          class="bg-white rounded-2xl p-2 menu-shadow"
+      <div class="mb-9">
+        <h3
+          class="font-light text-xs mb-6 ml-3 border-b-green-400 border-b-2 w-9 pb-1"
         >
-          <p class="font-bold text-base">{{ dish.title }}</p>
-          <div class="flex justify-between">
-            <span class="font-light text-sm">{{ dish.description }}</span>
-            <span class="font-bold text-sm">{{ dish.price }}€</span>
-          </div>
-        </article>
+          ENTRÊES
+        </h3>
+        <div class="grid gap-y-4">
+          <article
+            *ngFor="let entry of restaurant.entries"
+            class="bg-white rounded-2xl px-3 py-2 menu-shadow"
+          >
+            <p class="font-bold text-base">{{ entry.title }}</p>
+            <div class="flex justify-between">
+              <span class="font-light text-sm">{{ entry.description }}</span>
+              <span class="font-bold text-sm">{{ entry.price }}€</span>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-    <div class="mb-9">
-      <h3
-        class="font-light text-xs mb-6 ml-3 border-b-green-400 border-b-2 w-9 pb-1"
-      >
-        DESSERTS
-      </h3>
-      <div class="grid gap-y-4">
-        <article
-          *ngFor="let dessert of restaurant.desserts"
-          class="bg-white rounded-2xl p-2 menu-shadow"
+      <div class="mb-9">
+        <h3
+          class="font-light text-xs mb-6 ml-3 border-b-green-400 border-b-2 w-9 pb-1"
         >
-          <p class="font-bold text-base">{{ dessert.title }}</p>
-          <div class="flex justify-between">
-            <span class="font-light text-sm">{{ dessert.description }}</span>
-            <span class="font-bold text-sm">{{ dessert.price }}€</span>
-          </div>
-        </article>
+          PLATS
+        </h3>
+        <div class="grid gap-y-4">
+          <article
+            *ngFor="let dish of restaurant.dishes"
+            class="bg-white rounded-2xl p-2 menu-shadow"
+          >
+            <p class="font-bold text-base">{{ dish.title }}</p>
+            <div class="flex justify-between">
+              <span class="font-light text-sm">{{ dish.description }}</span>
+              <span class="font-bold text-sm">{{ dish.price }}€</span>
+            </div>
+          </article>
+        </div>
       </div>
+      <div class="mb-9">
+        <h3
+          class="font-light text-xs mb-6 ml-3 border-b-green-400 border-b-2 w-9 pb-1"
+        >
+          DESSERTS
+        </h3>
+        <div class="grid gap-y-4">
+          <article
+            *ngFor="let dessert of restaurant.desserts"
+            class="bg-white rounded-2xl p-2 menu-shadow"
+          >
+            <p class="font-bold text-base">{{ dessert.title }}</p>
+            <div class="flex justify-between">
+              <span class="font-light text-sm">{{ dessert.description }}</span>
+              <span class="font-bold text-sm">{{ dessert.price }}€</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <button class="button inline mx-auto px-12 py-3">Commander</button>
     </div>
-    <button class="button inline mx-auto px-12 py-3">Commander</button>
-  </div>
+  </section>
 </section>
 
 <app-footer></app-footer>
